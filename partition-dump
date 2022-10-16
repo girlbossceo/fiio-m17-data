@@ -1,0 +1,157 @@
+sdm660_64:/ # cat /proc/partitions
+major minor  #blocks  name
+
+   1        0       8192 ram0
+   1        1       8192 ram1
+   1        2       8192 ram2
+   1        3       8192 ram3
+   1        4       8192 ram4
+   1        5       8192 ram5
+   1        6       8192 ram6
+   1        7       8192 ram7
+   1        8       8192 ram8
+   1        9       8192 ram9
+   1       10       8192 ram10
+   1       11       8192 ram11
+   1       12       8192 ram12
+   1       13       8192 ram13
+   1       14       8192 ram14
+   1       15       8192 ram15
+ 253        0    2097152 zram0
+ 179        0   61071360 mmcblk0
+ 179        1       1024 mmcblk0p1
+ 179        2       3584 mmcblk0p2
+ 179        3       3584 mmcblk0p3
+ 179        4       4096 mmcblk0p4
+ 179        5       4096 mmcblk0p5
+ 179        6        512 mmcblk0p6
+ 179        7        512 mmcblk0p7
+ 179        8        512 mmcblk0p8
+ 179        9        512 mmcblk0p9
+ 179       10        512 mmcblk0p10
+ 179       11        512 mmcblk0p11
+ 179       12       2048 mmcblk0p12
+ 179       13      65536 mmcblk0p13
+ 179       14      65536 mmcblk0p14
+ 179       15   12582912 mmcblk0p15
+ 179       16      98304 mmcblk0p16
+ 179       17      98304 mmcblk0p17
+ 179       18         64 mmcblk0p18
+ 179       19         64 mmcblk0p19
+ 179       20       1024 mmcblk0p20
+ 179       21       1024 mmcblk0p21
+ 179       22       1024 mmcblk0p22
+ 179       23       1024 mmcblk0p23
+ 179       24       1024 mmcblk0p24
+ 179       25       1024 mmcblk0p25
+ 179       26       4096 mmcblk0p26
+ 179       27       4096 mmcblk0p27
+ 179       28      32768 mmcblk0p28
+ 179       29      32768 mmcblk0p29
+ 179       30     112640 mmcblk0p30
+ 179       31     112640 mmcblk0p31
+ 259        0      16384 mmcblk0p32
+ 259        1      16384 mmcblk0p33
+ 259        2       1024 mmcblk0p34
+ 259        3       1024 mmcblk0p35
+ 259        4       1024 mmcblk0p36
+ 259        5          4 mmcblk0p37
+ 259        6        256 mmcblk0p38
+ 259        7        256 mmcblk0p39
+ 259        8          1 mmcblk0p40
+ 259        9     262144 mmcblk0p41
+ 259       10     262144 mmcblk0p42
+ 259       11          4 mmcblk0p43
+ 259       12       1024 mmcblk0p44
+ 259       13       8192 mmcblk0p45
+ 259       14       1024 mmcblk0p46
+ 259       15         16 mmcblk0p47
+ 259       16         16 mmcblk0p48
+ 259       17       1024 mmcblk0p49
+ 259       18       1024 mmcblk0p50
+ 259       19          1 mmcblk0p51
+ 259       20          8 mmcblk0p52
+ 259       21      24576 mmcblk0p53
+ 259       22      24576 mmcblk0p54
+ 259       23       2048 mmcblk0p55
+ 259       24       2048 mmcblk0p56
+ 259       25      32768 mmcblk0p57
+ 259       26      32768 mmcblk0p58
+ 259       27       1024 mmcblk0p59
+ 259       28        512 mmcblk0p60
+ 259       29       1024 mmcblk0p61
+ 259       30       1024 mmcblk0p62
+ 259       31        512 mmcblk0p63
+ 259       32      65536 mmcblk0p64
+ 259       33       2048 mmcblk0p65
+ 259       34        128 mmcblk0p66
+ 259       35     131072 mmcblk0p67
+ 259       36         64 mmcblk0p68
+ 259       37         64 mmcblk0p69
+ 259       38   46391279 mmcblk0p70
+ 179       32      16384 mmcblk0rpmb
+ 252        0    1792428 dm-0
+ 252        1     276268 dm-1
+ 252        2     606668 dm-2
+ 252        3    1801408 dm-3
+ 252        4     276292 dm-4
+ 252        5     606672 dm-5
+ 252        6   46391279 dm-6
+
+#
+#
+
+sdm660_64:/ # mount -v
+tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,size=1863708k,nr_inodes=465927,mode=755)
+devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600,ptmxmode=000)
+proc on /proc type proc (rw,relatime,gid=3009,hidepid=2)
+sysfs on /sys type sysfs (rw,seclabel,relatime)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)
+tmpfs on /mnt type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=1863708k,nr_inodes=465927,mode=755,gid=1000)
+tmpfs on /apex type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=1863708k,nr_inodes=465927,mode=755)
+/dev/block/mmcblk0p58 on /metadata type ext4 (rw,seclabel,nosuid,nodev,noatime,discard,data=ordered)
+/dev/block/dm-3 on / type ext4 (ro,seclabel,nodev,relatime,discard,errors=remount-ro)
+/dev/block/dm-4 on /product type ext4 (ro,seclabel,relatime,discard)
+/dev/block/dm-5 on /vendor type ext4 (ro,seclabel,relatime,discard)
+tmpfs on /sbin type tmpfs (rw,seclabel,relatime,size=1863708k,nr_inodes=465927,mode=755)
+none on /dev/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+none on /dev/cg2_bpf type cgroup2 (rw,nosuid,nodev,noexec,relatime)
+none on /dev/cpuctl type cgroup (rw,nosuid,nodev,noexec,relatime,cpu)
+none on /acct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct)
+none on /dev/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset,noprefix,release_agent=/sbin/cpuset_release_agent)
+none on /dev/memcg type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+none on /dev/stune type cgroup (rw,nosuid,nodev,noexec,relatime,schedtune)
+/dev/block/dm-3 on /apex/com.android.tzdata@290000000 type ext4 (ro,seclabel,relatime,discard,errors=remount-ro)
+/dev/block/dm-3 on /apex/com.android.tzdata type ext4 (ro,seclabel,relatime,discard,errors=remount-ro)
+/dev/block/dm-3 on /apex/com.android.runtime@1 type ext4 (ro,seclabel,relatime,discard,errors=remount-ro)
+/dev/block/dm-3 on /apex/com.android.runtime type ext4 (ro,seclabel,relatime,discard,errors=remount-ro)
+debugfs on /sys/kernel/debug type debugfs (rw,seclabel,relatime)
+none on /config type configfs (rw,nosuid,nodev,noexec,relatime)
+bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/debug/tracing type tracefs (rw,seclabel,relatime)
+/dev/block/mmcblk0p31 on /vendor/firmware_mnt type vfat (ro,context=u:object_r:firmware_file:s0,relatime,uid=1000,gid=1000,fmask=0337,dmask=0227,codepage=437,iocharset=iso8859-1,shortname=lower,errors=remount-ro)
+/dev/block/mmcblk0p50 on /vendor/bt_firmware type vfat (ro,context=u:object_r:bt_firmware_file:s0,relatime,uid=1002,gid=3002,fmask=0337,dmask=0227,codepage=437,iocharset=iso8859-1,shortname=lower,errors=remount-ro)
+/dev/block/mmcblk0p33 on /vendor/dsp type ext4 (ro,seclabel,nosuid,nodev,relatime,data=ordered)
+/dev/block/mmcblk0p57 on /mnt/vendor/persist type ext4 (rw,seclabel,nosuid,nodev,noatime,data=ordered)
+tmpfs on /storage type tmpfs (rw,seclabel,nosuid,nodev,noexec,relatime,size=1863708k,nr_inodes=465927,mode=755,gid=1000)
+/dev/block/dm-6 on /data type ext4 (rw,lazytime,seclabel,nosuid,nodev,noatime,discard,noauto_da_alloc,resgid=1065,data=ordered)
+/dev/block/dm-3 on /apex/com.android.conscrypt@290000000 type ext4 (ro,seclabel,nodev,relatime,discard,errors=remount-ro)
+/dev/block/dm-3 on /apex/com.android.conscrypt type ext4 (ro,seclabel,nodev,relatime,discard,errors=remount-ro)
+/dev/block/dm-3 on /apex/com.android.media@290000000 type ext4 (ro,seclabel,nodev,relatime,discard,errors=remount-ro)
+/dev/block/dm-3 on /apex/com.android.media type ext4 (ro,seclabel,nodev,relatime,discard,errors=remount-ro)
+/dev/block/dm-3 on /apex/com.android.media.swcodec@290000000 type ext4 (ro,seclabel,nodev,relatime,discard,errors=remount-ro)
+/dev/block/dm-3 on /apex/com.android.media.swcodec type ext4 (ro,seclabel,nodev,relatime,discard,errors=remount-ro)
+/dev/block/dm-3 on /apex/com.android.resolv@290000000 type ext4 (ro,seclabel,nodev,relatime,discard,errors=remount-ro)
+/dev/block/dm-3 on /apex/com.android.resolv type ext4 (ro,seclabel,nodev,relatime,discard,errors=remount-ro)
+devpts on /sbin/.magisk/pts type devpts (rw,seclabel,nosuid,noexec,relatime,mode=600,ptmxmode=000)
+/sbin/.magisk/block/product on /sbin/.magisk/mirror/product type ext4 (ro,seclabel,relatime,discard)
+/sbin/.magisk/block/vendor on /sbin/.magisk/mirror/vendor type ext4 (ro,seclabel,relatime,discard)
+/sbin/.magisk/block/data on /sbin/.magisk/mirror/data type ext4 (rw,lazytime,seclabel,relatime,discard,noauto_da_alloc,resgid=1065,data=ordered)
+/sbin/.magisk/block/system_root on /sbin/.magisk/mirror/system_root type ext4 (ro,seclabel,relatime,discard,errors=remount-ro)
+/sbin/.magisk/block/data on /sbin/.magisk/modules type ext4 (rw,lazytime,seclabel,relatime,discard,noauto_da_alloc,resgid=1065,data=ordered)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+/data/media on /mnt/runtime/default/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /storage/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=1015,multiuser,mask=6,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/runtime/read/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=23,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/runtime/write/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid,default_normal,unshared_obb)
+/data/media on /mnt/runtime/full/emulated type sdcardfs (rw,nosuid,nodev,noexec,noatime,fsuid=1023,fsgid=1023,gid=9997,multiuser,mask=7,derive_gid,default_normal,unshared_obb)
